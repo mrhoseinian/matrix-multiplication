@@ -94,15 +94,17 @@ int verify_matrix(const double *C, const double *D, const int m, const int n)
 	int i;
 	double diff = 0.;
     /* we assume input matrices are perfectly initialized */
+
 	for (i = 0; i < m * n; i++)
 	{
 		diff = fabs(C[i] - D[i]);
-        if (diff > 1e-3) break;
+       	if (diff > 1e-3) break;
 	}
 
 	if (diff > 1e-3) 
     {
-//        printf("incorrect. bias = %lf\n", diff);
+	
+       // printf("incorrect. bias = %lf\n", diff);
         return -1;
     }
     else
