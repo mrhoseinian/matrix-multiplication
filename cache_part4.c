@@ -20,7 +20,7 @@
 int main(int argc, char *argv[])
 {
     int i, j;
-    int b;
+    int b=32;
 
     int matrix_dim = 2046;
 
@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
     if ( matrix_copy(C_verify, C, matrix_dim, matrix_dim) ) return -1;
 
     t0 = get_sec();
-    optimal(A, B, C, matrix_dim, b = 66);
+    optimal(A, B, C, matrix_dim, b );
     t1 = get_sec();
     elapsed_time = t1 - t0;
 
